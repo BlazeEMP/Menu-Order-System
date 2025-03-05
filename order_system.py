@@ -49,42 +49,44 @@ def place_order(menu):
                 # TODO: Update the variable names in the following function
                 print_menu_line(i, food_category, meal, price)
 
-
                 # Update the menu selection number
                 i += 1
 
         # TODO: Ask customer to input menu item number
-        i = input("Please enter the number of the item you would like to order: ")
-
+        menu_selection = input("Please enter the number of the item you would like to order: ")
 
         # TODO: Update the order list using the update_order function
         # TODO: Send the order list, menu selection, and menu items as arguments
-
+        update_order(order, menu_selection, menu_items)
 
         # TODO: Ask the customer if they would like to order anything else
         # TODO: Let the customer know if they should type 'n' or 'N' to quit
-
+        exit = input("Would you like to order anything else? Type 'n' or 'N' to quit.")
 
         # TODO: Write a conditional statement that checks the user's input
         # TODO: The conditional statement should check for 'n' or 'N'
+        if exit == 'n' or exit == 'N':
 
             # TODO: Write a print statement that thanks the customer for their order
-
+            print("Thank you for your order!")
 
             # TODO: Use list comprehension to create a list called prices_list,
             # TODO: which contains the total prices for each item in the order list:
             # TODO: The total price for each item should multiply the price by quantity
-
+            prices_list = [item["Price"] * item["Quantity"] for item in order]
 
             # TODO: Create an order_total from the prices list using sum()
             # TODO: Round the prices to 2 decimal places.
-
+            order_total = round(sum(prices_list), 2)
 
             # TODO: Exit the ordering loop
             # TODO: Either use a break statement or set the condition to False
+            break
 
 
     # TODO: Return the order list and the order total
+    print(order)
+    return order, order_total
 
 
 def update_order(order, menu_selection, menu_items):
