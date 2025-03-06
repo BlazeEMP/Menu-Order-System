@@ -20,7 +20,9 @@
 
   ## Usage
 
-  Open the python file in your dev environment or console and use the python command to invoke the application, then simply follow the prompts in the application.
+  Open the python file in your dev environment or console and use the python command to invoke the application, then simply follow the prompts in the application.  
+  ![A screenshot of the initial screen when launching the menu](./Assets/Launch%20menu.PNG)  
+  ![A screenshot of what the receipt may look like after ordering](./Assets/Menu%20receipt.PNG)
 
   ## License
 
